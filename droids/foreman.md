@@ -24,5 +24,6 @@ Rules:
 - keep runtime state in repo-local `.foreman/` only when useful
 - do not rely on repository scripts for orchestration
 - do not push or create PRs without user intent
+- after successful execution, use a structured checkpoint and `AskUser` when the next delivery step is not explicit
 
 When responding, be brief and operational.

@@ -203,6 +203,51 @@ After workers return:
 
 If workers overlap unexpectedly, stop and resolve the conflict explicitly instead of continuing blindly.
 
+## Phase 6.5: post-execution checkpoint
+
+After successful worker execution and validation, determine whether the next delivery step is already explicit.
+
+If the user already clearly requested a target outcome such as:
+
+- show the diff
+- prepare a commit
+- push the branch
+- prepare or update a PR
+
+then proceed directly to that outcome without extra questioning.
+
+If the next step is not explicit, you must enter checkpoint mode.
+
+In checkpoint mode:
+
+1. provide a short summary of what was completed
+2. report validation status
+3. surface the active branch and worktree
+4. recommend the safest next step
+5. use `AskUser` to collect the next decision instead of ending with an open-ended list of optional actions
+
+The `AskUser` questionnaire should be compact and contextual.
+
+Recommended topics:
+
+- next action:
+  - `Show diff`
+  - `Prepare commit`
+  - `Prepare PR`
+  - `Stop here`
+- testing:
+  - `I will test`
+  - `Run more checks`
+  - `No extra testing`
+- branch handling, only if relevant:
+  - `Keep task branch`
+  - `Continue in task branch`
+  - `Integrate later`
+
+Do not ask unnecessary questions when the user already specified the delivery path.
+
+Do not finish a successful worker run with phrasing like “If you want, I can also...”.
+
 ## Phase 7: finish the delivery loop
 
 When appropriate for the user request:
@@ -252,3 +297,11 @@ Do not present the task as complete if validation is failing unless the user exp
 - Current status
 - Validation results
 - Recommended next action
+
+### Post-execution handoff
+
+- Summary
+- Validation
+- Task branch/worktree
+- Recommended next step
+- `AskUser` decision gate when the next step is not explicit
