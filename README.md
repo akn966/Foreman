@@ -15,6 +15,7 @@ This repository currently provides:
 - a Factory Droid-oriented skill/bootstrap layer
 - Droid definitions for `foreman` and `worker`
 - supporting scripts, templates, schemas, and policies
+- a project-level `AGENTS.md` template and provision script
 
 Support for other agents is not added yet.
 
@@ -41,6 +42,7 @@ Foreman is not the worker. Foreman is the coordinator.
 - `.factory/droids/` — orchestrator and worker definitions
 - `scripts/` — helper automation scripts
 - `templates/` — task and bug report templates
+- `templates/AGENTS.template.md` — project-level AGENTS file template
 - `schemas/` — task registry schema
 - `state/` — local and example task state
 - `policies/` — orchestration rules
@@ -70,7 +72,11 @@ Recommended installation flow:
    - `.factory/droids/foreman.md`
    - `.factory/droids/worker.md`
    - `SKILL.md`
-4. use Foreman in chat as the main controller agent for orchestration tasks
+4. provision a project-level `AGENTS.md` into the target repository using:
+   ```powershell
+   .\scripts\provision-agents-file.ps1 -TargetPath "C:\path\to\target-project\AGENTS.md"
+   ```
+5. use Foreman in chat as the main controller agent for orchestration tasks
 
 For now, Foreman should be treated as a **Factory Droid-only skill/toolkit**.
 
@@ -80,6 +86,7 @@ The current MVP includes:
 - a Factory Droid skill entry in `SKILL.md`
 - a generic orchestrator droid definition
 - a generic worker droid definition
+- a project-level `AGENTS.md` template and provision script
 - task registry helpers
 - task bootstrap and status update scripts
 - worktree/build/push/pr helper scripts

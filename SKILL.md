@@ -26,6 +26,7 @@ It is not yet packaged for other agents or editors.
 
 When applied to a project, Foreman should provision:
 - orchestrator and worker droid definitions
+- a project-level `AGENTS.md` file with orchestration rules
 - task registry helpers
 - task state templates
 - worktree/build/push/pr scripts
@@ -35,3 +36,5 @@ When applied to a project, Foreman should provision:
 
 Use Foreman in chat as the main controller.
 Let Foreman allocate worktrees, delegate to workers, and drive the implementation loop.
+
+Foreman should also provision a project-level `AGENTS.md` into the target repository so the orchestration rules are explicit where the real work happens.
