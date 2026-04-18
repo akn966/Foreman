@@ -5,5 +5,7 @@
   "author": {
     "name": "Amir"
   },
-  "repository": "https://github.com/akncx/Foreman"
+  "homepage": "https://github.com/akncx/Foreman",
+  "repository": "https://github.com/akncx/Foreman",
+  "license": "MIT"
 }
