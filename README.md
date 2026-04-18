@@ -39,6 +39,7 @@ Expected behavior:
 
 ## Repository layout
 
+- `.factory-plugin/marketplace.json` — single-plugin marketplace manifest
 - `.factory-plugin/plugin.json` — plugin manifest
 - `skills/foreman/SKILL.md` — orchestration logic
 - `droids/foreman.md` — coordinator droid
@@ -60,6 +61,8 @@ Then invoke:
 ```
 
 ## Install from GitHub marketplace source
+
+This repository is published as a single-plugin marketplace.
 
 Register the repository as a marketplace source:
 

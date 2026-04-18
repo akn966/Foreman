@@ -3,7 +3,7 @@
   "description": "Multi-task orchestration plugin for Factory Droid with /foreman entrypoint and worker subagents.",
   "version": "1.0.0",
   "author": {
-    "name": "Amir"
+    "name": "akncx"
   },
   "homepage": "https://github.com/akncx/Foreman",
   "repository": "https://github.com/akncx/Foreman",

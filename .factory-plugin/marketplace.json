@@ -1,0 +1,15 @@
+{
+  "name": "foreman",
+  "description": "Single-plugin marketplace for the Foreman Factory Droid orchestration plugin.",
+  "owner": {
+    "name": "akncx"
+  },
+  "plugins": [
+    {
+      "name": "foreman",
+      "description": "Multi-task orchestration plugin for Factory Droid with /foreman entrypoint and worker subagents.",
+      "source": ".",
+      "category": "orchestration"
+    }
+  ]
+}
